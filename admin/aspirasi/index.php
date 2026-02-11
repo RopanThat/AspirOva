@@ -75,8 +75,10 @@ $data = mysqli_query($koneksi, "
                     $badge = 'secondary';
                 } elseif ($row['status'] == 'proses') {
                     $badge = 'warning';
-                } else {
+                } elseif ($row['status'] == 'selesai') {
                     $badge = 'success';
+                } else {
+                    $badge = 'danger';
                 }
 
                 // foto
@@ -120,11 +122,6 @@ $data = mysqli_query($koneksi, "
                                 <a href="detail_aspirasi.php?id=<?= $row['id_aspirasi'] ?>"
                                     class="btn btn-info btn-sm w-100">
                                     <i class="bi bi-eye"></i> Detail
-                                </a>
-                                <a href="hapus_aspirasi.php?id=<?= $row['id_aspirasi'] ?>"
-                                    onclick="return confirm('Yakin ingin menghapus aspirasi ini?')"
-                                    class="btn btn-danger btn-sm">
-                                    <i class="bi bi-trash"></i>
                                 </a>
 
                             </div>

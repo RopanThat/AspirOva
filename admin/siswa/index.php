@@ -77,21 +77,17 @@ $menu  = "siswa";
                                             <input type="email" class="form-control" id="email" name="email" required>
                                         </div>
                                         <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="text" class="form-control" id="password" name="password" required>
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                                             <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                                                 <option value="" selected disabled hidden>Pilih Jenis Kelamin</option>
                                                 <option value="L">Laki-laki</option>
                                                 <option value="P">Perempuan</option>
                                             </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="role" class="form-label">Role</label>
-                                            <select class="form-select" id="role" name="role" required>
-                                                <option value="" selected disabled hidden>Pilih Role</option>
-                                                <option value="siswa">Siswa</option>
-                                                <option value="admin">Admin</option>
-                                            </select>
-                                        </div>
+                                            </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -283,7 +279,6 @@ $menu  = "siswa";
                                                             <input type="email" name="email" id="" class="form-control mt-1" value="<?= $data['email']; ?>">
                                                         </div>
                                                     </div>
-
                                                     <div class="row">
                                                         <div class="col-lg-12">
                                                             <label for="" class="mt-2">Jenis Kelamin</label>
@@ -297,20 +292,6 @@ $menu  = "siswa";
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <label for="" class="mt-2">Role</label>
-                                                            <select class="form-select mt-1" name="role" id="">
-                                                                <option value="siswa" <?php if ($data['role'] == 'siswa') {
-                                                                                            echo "selected";
-                                                                                        } ?>>Siswa</option>
-                                                                <option value="admin" <?php if ($data['role'] == 'admin') {
-                                                                                            echo "selected";
-                                                                                        } ?>>Admin</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

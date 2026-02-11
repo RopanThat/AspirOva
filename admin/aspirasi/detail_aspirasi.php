@@ -117,6 +117,7 @@ if (!$row) {
                                             <option value="menunggu" <?= $row['status'] == 'menunggu' ? 'selected' : '' ?>>Menunggu</option>
                                             <option value="proses" <?= $row['status'] == 'proses' ? 'selected' : '' ?>>Proses</option>
                                             <option value="selesai" <?= $row['status'] == 'selesai' ? 'selected' : '' ?>>Selesai</option>
+                                            <option value="ditolak" <?= $row['status'] == 'ditolak' ? 'selected' : '' ?>>ditolak</option>
                                         </select>
                                         <button type="submit" name="update" class="btn btn-primary">
                                             Simpan

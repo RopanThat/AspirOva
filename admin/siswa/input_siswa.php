@@ -5,16 +5,15 @@ $nis  = $_POST['nis'];
 $nama_siswa     = $_POST['nama'];
 $id_kelas       = $_POST['id_kelas'];
 $email          = $_POST['email'];
+$password       = $_POST['password'];
 $jenis_kelamin  = $_POST['jenis_kelamin'];
-$role           = $_POST['role'];
+$role           = 'siswa';
 
-// password default
-$default_password = ($role == 'admin') ? 'admin123' : 'siswa123';
-$password = md5($default_password);
+$password = md5($password);
 
 
-$sql = "INSERT INTO tb_user (nis, nama, id_kelas, email, jenis_kelamin, role, password)
-            VALUES ('$nis', '$nama_siswa', '$id_kelas', '$email', '$jenis_kelamin', '$role', '$password')";
+$sql = "INSERT INTO tb_user (nis, nama, id_kelas, email, password, jenis_kelamin, role )
+            VALUES ('$nis', '$nama_siswa', '$id_kelas', '$email', '$password', '$jenis_kelamin', '$role' )";
 $sql_eksekusi = mysqli_query($koneksi, $sql);
 if ($sql_eksekusi) {
     header("location:index.php");
