@@ -38,12 +38,6 @@
                 <i class="bi bi-chat-dots me-1"></i> Aspirasi
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link <?= ($menu == 'feedback') ? 'active fw-semibold' : 'text-secondary' ?>"
-                href="<?= base_url ?>admin/feedback">
-                <i class="bi bi-people me-1"></i> Feedback
-            </a>
-        </li>
 
     </ul>
 

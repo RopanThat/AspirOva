@@ -31,9 +31,7 @@ $menu  = "siswa";
                 </div>
 
                 <div class="d-flex gap-2">
-                    <button class="btn btn-outline-danger rounded-3">
-                        <i class="bi bi-file-earmark-pdf me-1"></i> Export PDF
-                    </button>
+
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#exampleModal">

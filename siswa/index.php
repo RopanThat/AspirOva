@@ -107,7 +107,7 @@ $menu  = "dashboard_siswa";
             </div>
 
 
-            <div class="row mt-3">
+            <div class="row mt-3 d-flex align-items-center justify-content-center">
 
                 <!-- RIWAYAT ASPIRASI -->
                 <div class="col-md-6 mb-3">
@@ -136,35 +136,6 @@ $menu  = "dashboard_siswa";
                         </div>
                     </div>
                 </div>
-
-                <!-- FEEDBACK ADMIN -->
-                <div class="col-md-6 mb-3">
-                    <div class="menu-card feedback-card">
-                        <div class="d-flex align-items-start">
-
-                            <div class="menu-icon bg-primary-subtle">
-                                <i class="bi bi-chat-dots text-primary"></i>
-                            </div>
-
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="fw-bold mb-1">Feedback Admin</h5>
-                                <p class="text-muted mb-3">
-                                    Lihat dan balas chat dari admin seputar aspirasi kamu.
-                                </p>
-
-                                <a href="feedback" class="btn btn-soft-primary">
-                                    Lihat Pesan
-                                </a>
-                            </div>
-
-                            <div class="menu-arrow">
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
 

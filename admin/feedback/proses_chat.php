@@ -2,30 +2,24 @@
 session_start();
 include "../../includes/koneksi.php";
 
-// cek login
-if (!isset($_SESSION['id_user'])) {
+if ($_SESSION['role'] != 'admin') {
     header("location:../index.php");
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$id_admin    = intval($_SESSION['id_user']);
+$id_aspirasi = intval($_POST['id_aspirasi']);
+$pesan       = mysqli_real_escape_string($koneksi, $_POST['pesan']);
 
-    $user_id  = $_POST['user_id'];
-    $admin_id = $_SESSION['id_user'];
-    $pesan    = mysqli_real_escape_string($koneksi, $_POST['pesan']);
+if (!empty($pesan)) {
 
-    // validasi pesan tidak kosong
-    if (!empty($pesan)) {
-
-        $query = "INSERT INTO feedback_chat 
-                    (user_id, admin_id, pengirim, pesan) 
-                  VALUES 
-                    ('$user_id', '$admin_id', 'admin', '$pesan')";
-
-        mysqli_query($koneksi, $query);
-    }
-
-    // kembali ke halaman chat
-    header("location:feedback_chat.php?user=" . $user_id);
-    exit;
+    mysqli_query($koneksi, "
+        INSERT INTO tb_feedback 
+        (id_user, id_aspirasi, isi_feedback, pengirim)
+        VALUES 
+        ('$id_admin', '$id_aspirasi', '$pesan', 'admin')
+    ");
 }
+
+header("location:feedback_chat.php?aspirasi=$id_aspirasi");
+exit;

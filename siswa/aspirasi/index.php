@@ -180,7 +180,7 @@ $menu  = "";
 
                                 <!-- BUTTON -->
                                 <div class="d-flex justify-content-end gap-2 mt-3">
-                                    <a href="dashboard.php"
+                                    <a href="../index.php"
                                         class="btn btn-light rounded-3 px-4">
                                         Batal
                                     </a>
